@@ -17,12 +17,7 @@
   grid-area: list;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #575a5e;
+  border-right: 2px solid #3d4141;
   background-color: var(--side-bar-color);
 }
 
-.chat {
-  grid-area: chat;
-  padding: var(--padding);
-  background-color: var(--chat-color);
-}

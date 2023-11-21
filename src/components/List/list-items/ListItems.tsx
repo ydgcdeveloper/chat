@@ -1,4 +1,4 @@
-import { useAppStore } from '../../store/store';
+import { useAppStore } from '../../../store/store';
 import { ChatItem } from './chat-item/ChatItem'
 import './listItems.css'
 

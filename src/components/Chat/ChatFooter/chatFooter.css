@@ -1,0 +1,5 @@
+.chat-footer {
+    /* display: flex; */
+    grid-area: footer;
+    background-color: aqua;
+}

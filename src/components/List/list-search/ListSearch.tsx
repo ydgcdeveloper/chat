@@ -1,5 +1,5 @@
 import { IoArrowDownOutline, IoSearchOutline } from "react-icons/io5";
-import { useAppStore } from "../../store/store";
+import { useAppStore } from "../../../store/store";
 import './listSearch.css';
 
 export const ListSearch = () => {

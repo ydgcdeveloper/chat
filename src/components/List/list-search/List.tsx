@@ -1,5 +1,5 @@
-import { ListItems } from "./list-items/ListItems"
-import { ListSearch } from "./list-search/ListSearch"
+import { ListItems } from "../list-items/ListItems"
+import { ListSearch } from "./ListSearch"
 
 export const List = () => {
   return (

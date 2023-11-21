@@ -1,0 +1,4 @@
+.chat-header {
+    grid-area: header;
+    background-color: red;
+}
