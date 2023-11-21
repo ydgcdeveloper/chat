@@ -1,12 +1,12 @@
 .search-container {
   display: flex;
   position: relative;
+  height: 7.5vh;
 }
 
 .search-input {
-  height: 2rem;
   margin: 0.75rem;
-  width: 100%;
+  flex-grow: 1;
   background-color: #575a5e;
   border-radius: 0.8rem;
   color: var(--color);
@@ -24,7 +24,7 @@
 .search-icon {
   position: absolute;
   top: calc(50% + var(--padding) / 2 - 0.25rem / 2);
-  left: 1rem;
+  left: 1.3rem;
   transform: translateY(-50%);
   color: #a7a2a9;
 }
@@ -48,9 +48,9 @@
 }
 
 .active .icon-item {
-  animation: rotateIcon 0.3s both;
+  animation: rotateIcon 0.2s both;
 }
 
 .inactive .icon-item {
-  animation: rotateIconBack 0.3s both;
+  animation: rotateIconBack 0.2s both;
 }
