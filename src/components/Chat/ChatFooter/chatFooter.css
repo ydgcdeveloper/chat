@@ -1,5 +1,19 @@
 .chat-footer {
-    /* display: flex; */
-    grid-area: footer;
-    background-color: aqua;
+  display: flex;
+  grid-area: footer;
+  background-color: #3d4141;
+  align-items: center;
+  gap: .3rem;
+  padding: 0.5rem 1rem;
+}
+
+.chat-footer > .icon-footer {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.chat-footer > .icon-footer:hover {
+    background-color: rgba(87, 90, 94, 0.65);
 }

@@ -1,5 +1,4 @@
 .chat-content {
-    /* display: flex; */
     grid-area: content;
-    background-color: bisque;
+    background-color: #a7a2a9;
 }

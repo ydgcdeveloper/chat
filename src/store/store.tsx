@@ -152,4 +152,6 @@ export const useAppStore = create((set) => ({
   setActiveSearch: (active: boolean) => set({ activeSearch: active }),
   chatItems,
   setChatItems: (items: []) => set({ chatItems: items }),
+  selectedChatItem: {},
+  setSelectedChatItem: (item : object) => set({selectedChatItem: item})
 }));

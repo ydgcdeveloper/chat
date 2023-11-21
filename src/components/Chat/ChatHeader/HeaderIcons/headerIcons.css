@@ -1,0 +1,16 @@
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header-icons > .icon-header {
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .3rem;
+}
+
+.header-icons > .icon-header:active {
+  background-color: rgba(87, 90, 94, 0.65);
+}

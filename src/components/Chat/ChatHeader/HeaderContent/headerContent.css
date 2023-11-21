@@ -1,0 +1,22 @@
+.header-content {
+  display: flex;
+  flex: 1;
+}
+
+.header-content-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-info-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-content > .chat-name {
+  font-size: 1.2rem;
+}
+
+.header-content > .chat-last-date {
+  font-size: 1.2rem;
+}
