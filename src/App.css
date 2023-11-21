@@ -1,0 +1,28 @@
+.chatApp {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100vh;
+  grid-template-areas:
+    "list chat chat chat"
+    "list chat chat chat"
+    "list chat chat chat";
+}
+
+.chatApp > div {
+  display: flex;
+}
+
+.list {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #575a5e;
+  background-color: var(--side-bar-color);
+}
+
+.chat {
+  grid-area: chat;
+  padding: var(--padding);
+  background-color: var(--chat-color);
+}

@@ -1,0 +1,22 @@
+html{
+  --font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Apple Color Emoji", "Segoe UI", Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    --font-size: 16px;
+    --padding: .5rem;
+    --color: #f4f7f5;
+    --side-bar-color: #222823;
+    --chat-color: #575a5e;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0px;
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 1.5;
+  overflow: hidden;
+  overscroll-behavior: none;
+}

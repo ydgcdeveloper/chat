@@ -1,0 +1,8 @@
+.chat-item {
+    height: 3.5rem;
+    cursor: pointer;
+}
+
+.chat-item:hover {
+    background-color: var(--chat-color);
+}
