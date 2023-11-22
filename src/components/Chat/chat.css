@@ -8,7 +8,7 @@
   display: grid;
   flex: 1;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: minmax(7vh, auto) auto minmax(8vh, auto);
+  grid-template-rows: minmax(3.5rem, 8%) auto minmax(4rem, 9%);
   grid-template-areas:
     "header header header header header header"
     ". content content content content ."
@@ -21,4 +21,3 @@
   align-items: center;
   justify-content: center;
 }
-

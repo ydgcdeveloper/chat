@@ -1,7 +1,7 @@
 .list-items {
     margin-top: .12rem;
     overflow-y: auto;
-    max-height: 92.7vh;
+    max-height: 92.2vh;
     scrollbar-width: thin;
     scrollbar-color: #08090A;
 }

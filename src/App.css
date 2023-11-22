@@ -12,12 +12,3 @@
 .chatApp > div {
   display: flex;
 }
-
-.list {
-  grid-area: list;
-  display: flex;
-  flex-direction: column;
-  border-right: 2px solid #3d4141;
-  background-color: var(--side-bar-color);
-}
-
