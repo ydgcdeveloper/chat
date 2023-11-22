@@ -1,0 +1,38 @@
+.empty-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.empty-content > h1 {
+    font-weight: 100;
+}
+
+.empty-content > .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.empty-content > .image-container > img {
+    width: 250px;
+}
+
+.empty-content > .sub-title {
+    display: flex;
+    justify-content: center;
+}
+
+.empty-content > .bottom-text {
+    display: flex;
+    justify-content: center;
+}
+
+.empty-content > .bottom-text > p {
+    display: flex;
+    align-items: center;
+}
+
+.icon-lock {
+    font-size: .85rem;
+    margin-right: .2rem;
+}
