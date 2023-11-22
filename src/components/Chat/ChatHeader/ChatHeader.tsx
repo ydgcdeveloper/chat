@@ -12,7 +12,7 @@ export const ChatHeader = () => {
 
   return (
     <div className='chat-header'>
-      <ChatItemIcon src={selectedChatItem.src} size={ICON_HEADER_SIZE}/>
+      <ChatItemIcon src={selectedChatItem.participants[1].profileImage} size={ICON_HEADER_SIZE}/>
       <HeaderContent item={selectedChatItem}/>
       <HeaderIcons/>
     </div>

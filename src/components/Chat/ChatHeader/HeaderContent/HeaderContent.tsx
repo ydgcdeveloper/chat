@@ -5,7 +5,7 @@ export const HeaderContent = ({ item }) => {
     <div className="header-content">
       <div className="header-content-data">
         <div className="header-info-row">
-          <div className="chat-name">{item.name}</div>
+          <div className="chat-name">{item.participants[1].firstName}</div>
         </div>
         <div className="header-last-date">
           <div className="chat-last-date">{item.lastDate}</div>

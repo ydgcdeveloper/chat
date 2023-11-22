@@ -1,0 +1,63 @@
+// ExampleUsers.ts
+import User from '../interfaces/user.interface';
+
+const exampleUsers: User[] = [
+  {
+    id: 1,
+    username: 'john_doe',
+    firstName: 'John',
+    lastName: 'Doe',
+    email: 'john.doe@example.com',
+    profileImage: 'https://gravatar.com/avatar/fa9325b432f352f9a208ef59bc8ca853?s=400&d=robohash&r=x',
+    status: 'online',
+    bio: 'Front-end Developer',
+    phoneNumber: '+1234567890',
+    location: 'New York, USA',
+    dateOfBirth: '1990-05-15',
+    joinedDate: '2022-01-01',
+  },
+  {
+    id: 2,
+    username: 'alice_smith',
+    firstName: 'Alice',
+    lastName: 'Smith',
+    email: 'alice.smith@example.com',
+    profileImage: 'https://robohash.org/fa9325b432f352f9a208ef59bc8ca853?set=set4&bgset=&size=400x400',
+    status: 'offline',
+    bio: 'UX/UI Designer',
+    phoneNumber: '+9876543210',
+    location: 'San Francisco, USA',
+    dateOfBirth: '1985-08-22',
+    joinedDate: '2022-02-15',
+  },
+  {
+    id: 3,
+    username: 'bob_jones',
+    firstName: 'Bob',
+    lastName: 'Jones',
+    email: 'bob.jones@example.com',
+    profileImage: 'https://gravatar.com/avatar/65692bff0cea40fd753c633cce0c9c2c?s=400&d=robohash&r=x',
+    status: 'away',
+    bio: 'Software Engineer',
+    phoneNumber: '+1122334455',
+    location: 'London, UK',
+    dateOfBirth: '1988-12-10',
+    joinedDate: '2022-03-20',
+  },
+  {
+    id: 4,
+    username: 'emily_wilson',
+    firstName: 'Emily',
+    lastName: 'Wilson',
+    email: 'emily.wilson@example.com',
+    profileImage: 'https://example.com/emily_wilson.jpg',
+    status: 'online',
+    bio: 'Product Manager',
+    phoneNumber: '+3344556677',
+    location: 'Paris, France',
+    dateOfBirth: '1992-04-25',
+    joinedDate: '2022-04-25',
+  },
+];
+
+export default exampleUsers;
