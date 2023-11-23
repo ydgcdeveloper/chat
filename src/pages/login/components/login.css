@@ -12,6 +12,8 @@
   background-color: #303032;
   border-radius: 15px;
   padding: 40px 50px;
+  box-shadow: inset 3px 3px 6px #575a5e, 3px 3px 6px #575a5e;
+
 }
 
 .login-form .form-title {
@@ -61,7 +63,7 @@
 .form-field > button {
   margin-top: 12px;
   align-self: center;
-  min-height: 30px;
+  height: 2.8rem;
   width: 20vw;
   min-width: 100px;
   padding: 0.8rem 0;
@@ -74,6 +76,10 @@
   justify-content: center;
   align-items: center;
   gap: 4px;
+}
+
+.spinner {
+  font-size: 1rem;
 }
 
 .form-field > .input-icon {
@@ -92,4 +98,17 @@
 
 .form-field > button:focus {
   border: none;
+}
+
+.rotate {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

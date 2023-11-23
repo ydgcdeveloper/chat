@@ -16,4 +16,6 @@ export const useAppStore = create((set) => ({
         created_date: new Date(),
       },
     }),
+  isSendingLogin: false,
+  setIsSendingLogin: (value: boolean) => set({ isSendingLogin: value }),
 }));

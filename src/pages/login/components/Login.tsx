@@ -1,11 +1,14 @@
 import "./login.css";
 import { IoKeyOutline, IoNavigate, IoPersonOutline } from "react-icons/io5";
+import { ImSpinner6 } from "react-icons/im";
+import { useAppStore } from "../../../store/store";
 
 export const Login = () => {
+  const { isSendingLogin, setIsSendingLogin } = useAppStore((state) => state);
   return (
     <div className="login">
       <div className="login-form">
-        <form action="#">
+        <form  onSubmit={() => setIsSendingLogin(!isSendingLogin)}>
           <div className="form-title">Log In</div>
           <div className="form-field">
             <label htmlFor="username">Username:</label>
@@ -20,8 +23,15 @@ export const Login = () => {
             </div>
           </div>
           <div className="form-field">
-            <button type="submit">
-              Sign in <IoNavigate />
+            <button type="submit" disabled={isSendingLogin}>
+              {!isSendingLogin && (
+                <>
+                  Sign in <IoNavigate />
+                </>
+              )}
+              {isSendingLogin && (
+                <ImSpinner6 className="spinner rotate"></ImSpinner6>
+              )}
             </button>
           </div>
         </form>
