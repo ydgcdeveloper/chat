@@ -1,0 +1,14 @@
+.chatApp {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100vh;
+  grid-template-areas:
+    "list chat chat chat"
+    "list chat chat chat"
+    "list chat chat chat";
+}
+
+.chatApp > div {
+  display: flex;
+}

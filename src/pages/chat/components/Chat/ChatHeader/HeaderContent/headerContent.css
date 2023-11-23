@@ -6,6 +6,7 @@
 .header-content-data {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .header-info-row {
