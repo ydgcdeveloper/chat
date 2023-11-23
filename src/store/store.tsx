@@ -1,5 +1,5 @@
 import create from "zustand";
-import chatItems from "../data/chatItems.data";
+import chatItems from "../pages/chat/data/chatItems.data";
 
 export const useAppStore = create((set) => ({
   activeSearch: false,

@@ -1,4 +1,4 @@
-import { useAppStore } from "../../store/store";
+import { useAppStore } from "../../../../store/store";
 import { ChatContent } from "./ChatContent/ChatContent";
 import { ChatFooter } from "./ChatFooter/ChatFooter";
 import { ChatHeader } from "./ChatHeader/ChatHeader";

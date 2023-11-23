@@ -1,6 +1,6 @@
 import { IoArrowDownOutline, IoSearchOutline } from "react-icons/io5";
-import { useAppStore } from "../../../store/store";
 import './listSearch.css';
+import { useAppStore } from "../../../../../store/store";
 
 export const ListSearch = () => {
   const { activeSearch, setActiveSearch } = useAppStore((state) => state);

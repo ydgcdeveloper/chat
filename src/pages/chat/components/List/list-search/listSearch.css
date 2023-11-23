@@ -1,7 +1,6 @@
 .search-container {
   display: flex;
   position: relative;
-  height: 8vh;
 }
 
 .search-input {
@@ -14,6 +13,8 @@
   border: 1px solid transparent;
   padding: 0.25rem 0.5rem 0.25rem 2.2rem;
   transition: border 0.3s ease;
+  height: 4.5vh;
+  min-height: 2.5rem;
   outline: none;
 }
 

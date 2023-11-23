@@ -6,7 +6,7 @@ import {
   IoSendSharp,
 } from "react-icons/io5";
 import "./chatFooter.css";
-import { useAppStore } from "../../../store/store";
+import { useAppStore } from "../../../../../store/store";
 
 export const ChatFooter = () => {
   const { newMessage, setNewMessage } = useAppStore((state) => state);

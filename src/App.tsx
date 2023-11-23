@@ -1,6 +1,6 @@
 import './App.css'
-import { Chat } from './components/Chat/Chat'
-import { List } from './components/List/List'
+import { Chat } from './pages/chat/components/Chat/Chat'
+import { List } from './pages/chat/components/List/List'
 
 function App() {
 

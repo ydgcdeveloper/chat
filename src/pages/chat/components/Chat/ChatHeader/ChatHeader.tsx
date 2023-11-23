@@ -1,4 +1,4 @@
-import { useAppStore } from '../../../store/store';
+import { useAppStore } from '../../../../../store/store';
 import { ChatItemIcon } from '../../List/list-items/chat-item/chat-item-icon/ChatItemIcon';
 import { HeaderContent } from './HeaderContent/HeaderContent';
 import { HeaderIcons } from './HeaderIcons/HeaderIcons';

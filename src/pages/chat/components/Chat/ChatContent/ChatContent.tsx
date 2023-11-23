@@ -1,5 +1,5 @@
+import { useAppStore } from "../../../../../store/store";
 import exampleUsers from "../../../data/exampleUsers.data";
-import { useAppStore } from "../../../store/store";
 import { Message } from "./Message/Message";
 import "./chatContent.css";
 

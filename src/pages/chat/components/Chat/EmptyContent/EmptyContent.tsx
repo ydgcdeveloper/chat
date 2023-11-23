@@ -1,5 +1,5 @@
 import "./emptyContent.css";
-import chatImage from "../../../assets/chat.png";
+import chatImage from "../../../../../assets/chat.png";
 import { IoLockClosedOutline } from "react-icons/io5";
 
 export const EmptyContent = () => {
