@@ -18,4 +18,6 @@ export const useAppStore = create((set) => ({
     }),
   isSendingLogin: false,
   setIsSendingLogin: (value: boolean) => set({ isSendingLogin: value }),
+  isSendingRegister: false,
+  setIsSendingRegister: (value: boolean) => set({ isSendingRegister: value }),
 }));
