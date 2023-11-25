@@ -50,7 +50,7 @@ const exampleUsers: User[] = [
     firstName: 'Emily',
     lastName: 'Wilson',
     email: 'emily.wilson@example.com',
-    profileImage: 'https://example.com/emily_wilson.jpg',
+    profileImage: 'https://robohash.org/YZ6.png',
     status: 'online',
     bio: 'Product Manager',
     phoneNumber: '+3344556677',

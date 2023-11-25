@@ -55,6 +55,7 @@ export const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSendingRegister(true);
     const v1 = USERNAME_REGEX.test(username);
     const v2 = PWD_REGEX.test(pwd);
     if (!v1 || !v2) {
@@ -67,8 +68,10 @@ export const Register = () => {
         username,
         password: pwd,
       });
+      setIsSendingRegister(false);
       console.log(response);
     } catch (error) {
+      setIsSendingRegister(false);
       console.log("error", error);
     }
   };

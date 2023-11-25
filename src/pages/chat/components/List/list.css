@@ -2,6 +2,6 @@
   grid-area: list;
   display: flex;
   flex-direction: column;
-  border-right: 2px solid #3d4141;
+  border-right: 2px solid #58565a;
   background-color: var(--side-bar-color);
 }

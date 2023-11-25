@@ -1,0 +1,39 @@
+.popover-container {
+  display: flex;
+  align-items: center;
+}
+
+.popover-content {
+    background-color: #303032;
+    
+}
+
+.popover-content ul {
+    margin: 0;
+    padding-inline: 0;
+}
+
+.popover-content li {
+    list-style-type: none;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #232324;
+}
+
+.popover-container .icon-header {
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: .2rem;
+}
+
+.popover-container .icon-header:active {
+  background-color: rgba(87, 90, 94, 0.65);
+}
+
+.flex {
+  display: flex;
+}

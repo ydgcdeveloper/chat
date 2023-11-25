@@ -1,0 +1,14 @@
+.list-header {
+  position: relative;
+  display: flex;
+  background-color: #3d4141;
+  padding: .5rem .6rem;
+  
+}
+
+.list-header-row {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+}
