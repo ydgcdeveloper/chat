@@ -7,6 +7,7 @@ import { LOGIN_URL, PWD_REGEX, USERNAME_REGEX } from "../../../util/constants";
 import axios from "../../../api/axios";
 import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
+import toast from 'react-hot-toast';
 
 export const Login = () => {
   const { isSendingLogin, setIsSendingLogin } = useAppStore((state) => state);
@@ -38,7 +39,7 @@ export const Login = () => {
     setErrMsg("");
   }, [username, pwd]);
 
-  const handleSubmit = async (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setIsSendingLogin(true);
     const v1 = USERNAME_REGEX.test(username);
@@ -57,15 +58,15 @@ export const Login = () => {
       signIn({
         token: response.data.access_token,
         expiresIn: 3600,
-        tokenType: 'Bearer',
-        authState: { username }
-      })
+        tokenType: "Bearer",
+        authState: { username },
+      });
       setIsSendingLogin(false);
-      navigate('/')
-      console.log(response);
+      toast.success('You have successfully logged in.');
+      navigate("/");
     } catch (error) {
       setIsSendingLogin(false);
-      console.log("error", error);
+      toast.error('Login failed. Please try again.')
     }
   };
 

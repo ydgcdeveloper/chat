@@ -14,13 +14,14 @@ import {
   REGISTER_URL,
   USERNAME_REGEX,
 } from "../../../util/constants";
+import toast from 'react-hot-toast';
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const { isSendingRegister, setIsSendingRegister } = useAppStore(
     (state) => state
   );
-
-  const errRef = useRef();
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState("");
   const [validUsername, setValidUsername] = useState(false);
@@ -69,10 +70,11 @@ export const Register = () => {
         password: pwd,
       });
       setIsSendingRegister(false);
-      console.log(response);
+      toast.success('You have successfully signed up.');
+      navigate('/login')
     } catch (error) {
       setIsSendingRegister(false);
-      console.log("error", error);
+      toast.error('Sign up failed. Please try again.')
     }
   };
 

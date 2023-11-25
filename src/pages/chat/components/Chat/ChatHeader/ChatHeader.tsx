@@ -5,8 +5,6 @@ import { HeaderContent } from './HeaderContent/HeaderContent';
 import { HeaderIcons } from './HeaderIcons/HeaderIcons';
 import './chatHeader.css'
 
-
-
 export const ChatHeader = () => {
 
   const { selectedChatItem } = useAppStore((state) => state);

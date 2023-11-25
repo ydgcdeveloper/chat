@@ -38,7 +38,7 @@ export const MyPopover = () => {
             <div>
               <div className="popover-content">
                 <ul onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-                    <li onClick={handleLogout}>Logout</li>
+                    <li onClick={() => handleLogout()}>Logout</li>
                 </ul>
               </div>
             </div>

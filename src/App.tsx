@@ -7,20 +7,26 @@ import { RequireAuth } from "react-auth-kit";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <RequireAuth loginPath="/login">
-              <ChatScreen />
-            </RequireAuth>
-          }
-        ></Route>
-        <Route path="/register" element={<RegisterScreen />}></Route>
-        <Route path="/login" element={<LoginScreen />}></Route>
-      </Routes>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <RequireAuth loginPath={"/login"}>
+            <ChatScreen />
+          </RequireAuth>
+        }
+      />
+      <Route path="/register" element={<RegisterScreen />} />
+      <Route path="/login" element={<LoginScreen />} />
+      <Route
+        path="*"
+        element={
+          <RequireAuth loginPath={"/login"}>
+            <ChatScreen />
+          </RequireAuth>
+        }
+      />
+    </Routes>
   );
 }
 

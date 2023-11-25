@@ -1,6 +1,6 @@
-export const logout = async (signOut, navigate) => {
+export const logout = (signOut, navigate) => {
     try {
-    await signOut();
+    signOut();
     navigate("/login");
   } catch (error) {
     console.error("Error during sign-out:", error);
