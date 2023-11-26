@@ -1,0 +1,8 @@
+.available-item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.available-item-content > .name {
+  font-size: 1.2rem;
+}

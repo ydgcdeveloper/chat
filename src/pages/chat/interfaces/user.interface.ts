@@ -9,9 +9,8 @@ interface User {
     bio?: string;
     phoneNumber?: string;
     location?: string;
-    dateOfBirth?: string; // Consider using a proper date type
-    joinedDate: string; // Consider using a proper date type
-    // Add more user-related fields as needed
+    dateOfBirth?: string;
+    joinedDate: string;
   }
   
   export default User;

@@ -48,6 +48,16 @@
   }
 }
 
+.back {
+  cursor: pointer;
+  padding: 0.1rem;
+}
+
+.back:hover {
+  background-color: #727576;
+  border-radius: 50%;
+}
+
 .active .icon-item {
   animation: rotateIcon 0.2s both;
 }

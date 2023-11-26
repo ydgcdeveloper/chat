@@ -20,4 +20,8 @@ export const useAppStore = create((set) => ({
   setIsSendingLogin: (value: boolean) => set({ isSendingLogin: value }),
   isSendingRegister: false,
   setIsSendingRegister: (value: boolean) => set({ isSendingRegister: value }),
+  showAvailableUsers: false,
+  setShowAvailableUsers: (value: boolean) => set({ showAvailableUsers: value }),
+  showPencil: false,
+  setShowPencil: (value: boolean) => set({ showPencil: value }),
 }));

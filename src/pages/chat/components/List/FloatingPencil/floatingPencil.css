@@ -1,0 +1,29 @@
+.floating-pencil {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  transform: translateY(5rem);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.floating-pencil.revealed {
+  transform: translateY(0);
+}
+
+.pencil {
+  display: flex;
+  background-color: #1e98c1;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pencil-icon:active {
+    font-size: 1.3rem;
+}
+
+.pencil-icon {
+  font-size: 1.2rem;
+  margin: auto;
+}

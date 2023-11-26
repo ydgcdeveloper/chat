@@ -1,9 +1,9 @@
 import { useAppStore } from "../../../../../../store/store";
-import { ChatItemContent } from "./chat-item-content/ChatItemContent";
-import { ChatItemIcon } from "./chat-item-icon/ChatItemIcon";
+import { ICON_LIST_SIZE } from "../../../../../../util/constants";
+import { ChatItemContent } from "./ChatItemContent/ChatItemContent";
+import { ChatItemIcon } from "./ChatItemIcon/ChatItemIcon";
 import "./chatItem.css";
 
-const ICON_LIST_SIZE = 3.5;
 
 export const ChatItem = ({ item }) => {
   const { setSelectedChatItem } = useAppStore((state) => state);

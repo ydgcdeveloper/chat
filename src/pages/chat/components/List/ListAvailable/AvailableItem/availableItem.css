@@ -1,0 +1,11 @@
+.available-item {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding: .45rem .75rem;
+    cursor: pointer;  
+}
+
+.available-item:hover {
+    background-color: var(--chat-color);
+}

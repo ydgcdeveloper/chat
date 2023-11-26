@@ -1,9 +1,11 @@
 import { IoArrowDownOutline, IoSearchOutline } from "react-icons/io5";
-import './listSearch.css';
+import "./listSearch.css";
 import { useAppStore } from "../../../../../store/store";
 
 export const ListSearch = () => {
-  const { activeSearch, setActiveSearch } = useAppStore((state) => state);
+  const { activeSearch, setActiveSearch, setShowAvailableUsers } = useAppStore(
+    (state) => state
+  );
 
   return (
     <div className="search-container">
@@ -14,9 +16,15 @@ export const ListSearch = () => {
         type="text"
         placeholder="Search"
       />
-      <span className={`search-icon ${activeSearch ? 'active' : 'inactive'}`}>
+      <span className={`search-icon ${activeSearch ? "active" : "inactive"}`}>
         {!activeSearch && <IoSearchOutline className="icon-item" />}
-        {activeSearch && <IoArrowDownOutline className="icon-item" style={{color: '#222823'}} />}
+        {activeSearch && (
+          <IoArrowDownOutline
+            className="icon-item back"
+            onClick={() => setShowAvailableUsers(false)}
+            style={{ color: "#222823" }}
+          />
+        )}
       </span>
     </div>
   );

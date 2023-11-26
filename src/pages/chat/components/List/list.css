@@ -1,4 +1,5 @@
 .list {
+  position: relative;
   grid-area: list;
   display: flex;
   flex-direction: column;

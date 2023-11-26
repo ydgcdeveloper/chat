@@ -1,6 +1,6 @@
 import { useAppStore } from "../../../../../store/store";
 import { ICON_HEADER_SIZE } from "../../../../../util/constants";
-import { ChatItemIcon } from "../list-items/chat-item/chat-item-icon/ChatItemIcon";
+import { ChatItemIcon } from "../ListItems/ChatItem/ChatItemIcon/ChatItemIcon";
 import "./listHeader.css";
 import { MyPopover } from "./Popover/Popover";
 

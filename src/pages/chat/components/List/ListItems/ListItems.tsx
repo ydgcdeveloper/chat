@@ -1,5 +1,5 @@
 import { useAppStore } from '../../../../../store/store';
-import { ChatItem } from './chat-item/ChatItem'
+import { ChatItem } from './ChatItem/ChatItem';
 import './listItems.css'
 
 
