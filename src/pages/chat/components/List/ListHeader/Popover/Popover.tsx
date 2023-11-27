@@ -1,14 +1,15 @@
 import { useState, useRef } from "react";
 import { IoEllipsisVertical } from "react-icons/io5";
 import { Popover, ArrowContainer } from "react-tiny-popover";
-import './popover.css'
+import "./popover.css";
 import { useSignOut } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
 import { logout } from "../../../../../../util/common";
-
+import { useAppStore } from "../../../../../../store/store";
 
 export const MyPopover = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const { reset } = useAppStore((state) => state);
 
   const boxContainerRef = useRef();
   const signOut = useSignOut();
@@ -16,6 +17,7 @@ export const MyPopover = () => {
 
   const handleLogout = () => {
     logout(signOut, navigate);
+    reset();
   };
 
   return (
@@ -38,7 +40,7 @@ export const MyPopover = () => {
             <div>
               <div className="popover-content">
                 <ul onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
-                    <li onClick={() => handleLogout()}>Logout</li>
+                  <li onClick={() => handleLogout()}>Logout</li>
                 </ul>
               </div>
             </div>

@@ -1,18 +1,28 @@
 import { IoArrowDownOutline, IoSearchOutline } from "react-icons/io5";
 import "./listSearch.css";
 import { useAppStore } from "../../../../../store/store";
+import { useEffect, useRef } from "react";
 
 export const ListSearch = () => {
-  const { activeSearch, setActiveSearch, setShowAvailableUsers } = useAppStore(
-    (state) => state
-  );
+  const {
+    activeSearch,
+    setActiveSearch,
+    setShowAvailableUsers,
+    focusToSearch,
+  } = useAppStore((state) => state);
+
+  const inputSearch = useRef(null);
+
+  useEffect(() => {
+    if (focusToSearch) inputSearch.current.focus();
+  }, [focusToSearch]);
 
   return (
     <div className="search-container">
       <input
+        ref={inputSearch}
         className="search-input"
         onClick={() => setActiveSearch(true)}
-        onBlur={() => setActiveSearch(false)}
         type="text"
         placeholder="Search"
       />
@@ -21,7 +31,7 @@ export const ListSearch = () => {
         {activeSearch && (
           <IoArrowDownOutline
             className="icon-item back"
-            onClick={() => setShowAvailableUsers(false)}
+            onClick={() => {setShowAvailableUsers(false), setActiveSearch(false)}}
             style={{ color: "#222823" }}
           />
         )}

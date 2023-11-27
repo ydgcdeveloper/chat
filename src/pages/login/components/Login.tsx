@@ -7,7 +7,7 @@ import { LOGIN_URL, PWD_REGEX, USERNAME_REGEX } from "../../../util/constants";
 import axios from "../../../api/axios";
 import { useSignIn } from "react-auth-kit";
 import { useNavigate } from "react-router-dom";
-import toast from 'react-hot-toast';
+import toast from "react-hot-toast";
 
 export const Login = () => {
   const { isSendingLogin, setIsSendingLogin } = useAppStore((state) => state);
@@ -61,12 +61,13 @@ export const Login = () => {
         tokenType: "Bearer",
         authState: { username },
       });
+      localStorage.setItem("user_logged", JSON.stringify(response.data.user));
       setIsSendingLogin(false);
-      toast.success('You have successfully logged in.');
+      toast.success("You have successfully logged in.");
       navigate("/");
     } catch (error) {
       setIsSendingLogin(false);
-      toast.error('Login failed. Please try again.')
+      toast.error("Login failed. Please try again.");
     }
   };
 

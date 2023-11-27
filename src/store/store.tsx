@@ -1,27 +1,56 @@
 import { create } from "zustand";
-import chatItems from "../pages/chat/data/chatItems.data";
+import axios from "../api/axios";
+import { AVAILABLE_USERS, USER_CHATS } from "../util/constants";
+
+const initialState = {
+  activeSearch: false,
+  focusToSearch: false,
+  chatItems: [],
+  selectedChatItem: null,
+  newMessage: {},
+  isSendingLogin: false,
+  isSendingRegister: false,
+  showAvailableUsers: false,
+  showPencil: false,
+  availableUsers: [],
+  userLoggued: null,
+};
 
 export const useAppStore = create((set) => ({
-  activeSearch: false,
-  setActiveSearch: (active: boolean) => set({ activeSearch: active }),
-  chatItems,
-  setChatItems: (items: []) => set({ chatItems: items }),
-  selectedChatItem: null,
-  setSelectedChatItem: (item: object) => set({ selectedChatItem: item }),
-  newMessage: {},
-  setNewMessage: (text: string) =>
+  ...initialState,
+  setUserLoggued: () =>
     set({
-      newMessage: {
-        text,
-        created_date: new Date(),
-      },
+      userLoggued:
+        JSON.parse(localStorage.getItem("user_logged") ?? "") ?? null,
     }),
-  isSendingLogin: false,
+  setActiveSearch: (active: boolean) => set({ activeSearch: active }),
+  setFocusToSearch: (focus: boolean) => set({ focusToSearch: focus }),
+  setChatItems: (items: []) => set({ chatItems: items }),
+  getChatItems: async () => {
+    const response = await axios.get(USER_CHATS, {
+      withCredentials: true,
+    });
+    set({ chatItems: response.data });
+  },
+  setSelectedChatItem: (item: object) => {
+    set({ selectedChatItem: item })
+  },
+  setNewMessage: (newMessage: object) => {
+    set({
+      newMessage,
+    });
+  },
   setIsSendingLogin: (value: boolean) => set({ isSendingLogin: value }),
-  isSendingRegister: false,
   setIsSendingRegister: (value: boolean) => set({ isSendingRegister: value }),
-  showAvailableUsers: false,
   setShowAvailableUsers: (value: boolean) => set({ showAvailableUsers: value }),
-  showPencil: false,
   setShowPencil: (value: boolean) => set({ showPencil: value }),
+  getAvailableUsers: async () => {
+    const response = await axios.get(AVAILABLE_USERS, {
+      withCredentials: true,
+    });
+    set({ availableUsers: response.data });
+  },
+  reset: () => {
+    set(initialState);
+  },
 }));

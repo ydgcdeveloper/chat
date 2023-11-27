@@ -3,7 +3,7 @@ import "./floatingPencil.css";
 import { IoPencilSharp } from "react-icons/io5";
 
 const FloatingPencil = () => {
-  const { setShowAvailableUsers, showPencil, setActiveSearch } = useAppStore(
+  const { setShowAvailableUsers, showPencil, setActiveSearch, setFocusToSearch } = useAppStore(
     (state) => state
   );
 
@@ -13,6 +13,7 @@ const FloatingPencil = () => {
       onClick={() => {
         setShowAvailableUsers(true);
         setActiveSearch(true);
+        setFocusToSearch(true);
       }}
     >
       <div className="pencil">
